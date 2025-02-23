@@ -1,0 +1,11 @@
+site_name: My Java Code Documentation
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md
+  - Java Code:
+      - java_1: java-code.md
+
+# This is where MKDocs looks for the markdown files
+docs_dir: docs_src
