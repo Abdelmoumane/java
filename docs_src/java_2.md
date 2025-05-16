@@ -2,7 +2,7 @@
 
 Este programa en Java solicita al usuario que ingrese una cadena de texto y luego extrae todos los dígitos que contiene, si los hay.
 
-### Código en Java:
+### Extract Digits from a String:
 
 ```java
 import java.util.Scanner;

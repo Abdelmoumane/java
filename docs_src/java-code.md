@@ -2,7 +2,7 @@
 
 Este programa en Java solicita al usuario que ingrese una cadena de texto y luego cuenta cuántas vocales (minúsculas 'a', 'e', 'i') contiene.
 
-### Código en Java:
+### Count Vowels:
 
 ```java
 import java.util.Scanner;
