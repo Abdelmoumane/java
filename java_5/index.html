@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>java_3 - My Java Code Documentation</title>
+    <title>java_5 - My Java Code Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "java_3";
-        var mkdocs_page_input_path = "java_3.md";
+        var mkdocs_page_name = "java_5";
+        var mkdocs_page_input_path = "java_5.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -49,15 +49,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_2/">java_2</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_3</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#funcion-que-reciba-un-array-y-devuelva-el-mayor-elemento">Función que reciba un array y devuelva el mayor elemento.:</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_3/">java_3</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_4/">java_4</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../java_5/">java_5</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_5</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#invertir-una-cadena-en-java">Invertir una cadena en Java.:</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -75,7 +75,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java Code</li>
-      <li class="breadcrumb-item active">java_3</li>
+      <li class="breadcrumb-item active">java_5</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -85,55 +85,24 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="java-program-to-extract-digits-from-a-string">Java Program to Extract Digits from a String</h2>
-<p>Función que reciba un array y devuelva el mayor elemento.</p>
-<h3 id="funcion-que-reciba-un-array-y-devuelva-el-mayor-elemento">Función que reciba un array y devuelva el mayor elemento.:</h3>
-<p>```java
-public class JavaApplication2 {</p>
-<pre><code>public static void arr (int [] array  ){
-
-
-    int max=array[0];
-
-    for (int i = 0; i &lt; array.length; i++) {
-
-        if (array[i] &gt; array[0]){
-
-
-
-            max = array[i];
-        }
-
-    }
-
-    System.out.println(max);
-
+<p>Este programa invierte una cadena de texto dada. Utiliza un ciclo for que recorre la cadena desde el último carácter hasta el primero, concatenando cada carácter en una nueva cadena para mostrar el resultado invertido. Por ejemplo, convierte "hello" en "olleh".</p>
+<h3 id="invertir-una-cadena-en-java">Invertir una cadena en Java.:</h3>
+<p>```java</p>
+<p>public static void main(String[] args) {
+    String a = "hello";
+    String b = "";</p>
+<pre><code>for (int i = a.length() - 1; i &gt;= 0; i--) {
+    b += a.charAt(i);
 }
 
-
-public static void main(String[] args) {
-
-
-
-    int numbers [] = {2,5,9,33,1};
-
-
- JavaApplication2.arr(numbers);
-
-
-
-
-
- }
-
-
-}
+System.out.println(b); // print: olleh
 </code></pre>
+<p>}</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../java_2/" class="btn btn-neutral float-left" title="java_2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../java_4/" class="btn btn-neutral float-right" title="java_4">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../java_4/" class="btn btn-neutral float-left" title="java_4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -156,10 +125,8 @@ public static void main(String[] args) {
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../java_2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../java_4/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../java_4/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
