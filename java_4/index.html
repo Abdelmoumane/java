@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>java_2 - My Java Code Documentation</title>
+    <title>java_4 - My Java Code Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "java_2";
-        var mkdocs_page_input_path = "java_2.md";
+        var mkdocs_page_name = "java_4";
+        var mkdocs_page_input_path = "java_4.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -47,15 +47,15 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../java-code/">java_1</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_2</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#extract-digits-from-a-string">Extract Digits from a String:</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_2/">java_2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_3/">java_3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../java_4/">java_4</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_4</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#anadir-logica-para-ordenar-notas-y-encontrar-la-nota-maxima">Añadir lógica para ordenar notas y encontrar la nota máxima.:</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -73,7 +73,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java Code</li>
-      <li class="breadcrumb-item active">java_2</li>
+      <li class="breadcrumb-item active">java_4</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -83,33 +83,54 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="java-program-to-extract-digits-from-a-string">Java Program to Extract Digits from a String</h2>
-<p>Este programa en Java solicita al usuario que ingrese una cadena de texto y luego extrae todos los dígitos que contiene, si los hay.</p>
-<h3 id="extract-digits-from-a-string">Extract Digits from a String:</h3>
-<p>```java
-import java.util.Scanner;</p>
-<p>public class JavaFx {
-    public static void main(String[] args) {</p>
-<pre><code>    Scanner scan = new Scanner(System.in);
+<p>Añadir lógica para ordenar notas y encontrar la nota máxima</p>
+<h3 id="anadir-logica-para-ordenar-notas-y-encontrar-la-nota-maxima">Añadir lógica para ordenar notas y encontrar la nota máxima.:</h3>
+<p>```java</p>
+<p>import java.util.Scanner;</p>
+<p>public class JavaApplication2 {</p>
+<pre><code>public static void main(String[] args) {
 
-    System.out.println("Introduce cadena:");
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Introduce las notas:");
 
-    String nom = scan.nextLine();
+    int arr[] = new int[3];
 
-    StringBuilder st = new StringBuilder();
+    // Input notes
+    for (int i = 0; i &lt; arr.length; i++) {
+        arr[i] = scan.nextInt();
+    }
 
-    // Recorremos cada carácter de la cadena
-    for (char ch : nom.toCharArray()) {
-
-        // Si el carácter es un dígito, lo agregamos a 'st'
-        if (Character.isDigit(ch)) {
-            st.append(ch);
+    // Find maximum
+    int max = arr[0];
+    for (int i = 1; i &lt; arr.length; i++) {
+        if (arr[i] &gt; max) {
+            max = arr[i];
         }
     }
 
-    // Si se encontraron dígitos, los mostramos
-    if (st.length() &gt; 0) {
-        System.out.println("El número es: " + st); 
+    // Sort array in ascending order using bubble sort
+    boolean sort;
+    int temp;
+    do {
+        sort = false;
+        for (int i = 0; i &lt; arr.length - 1; i++) {
+            if (arr[i] &gt; arr[i + 1]) {
+                temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+                sort = true;
+            }
+        }
+    } while (sort);
+
+    // Display sorted notes
+    System.out.println("Ordenar las notas de menor a mayor:");
+    for (int x : arr) {
+        System.out.print(x + " ");
     }
+
+    // Display max note
+    System.out.println("\nLa nota máxima es: " + max);
 }
 </code></pre>
 <p>}</p>
@@ -117,8 +138,7 @@ import java.util.Scanner;</p>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../java-code/" class="btn btn-neutral float-left" title="java_1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../java_3/" class="btn btn-neutral float-right" title="java_3">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../java_3/" class="btn btn-neutral float-left" title="java_3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -141,10 +161,8 @@ import java.util.Scanner;</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../java-code/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../java_3/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../java_3/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
