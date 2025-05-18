@@ -1,4 +1,3 @@
-## Java Program to Extract Digits from a String
 
 Añadir lógica para ordenar notas y encontrar la nota máxima
 
