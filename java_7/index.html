@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>java_5 - My Java Code Documentation</title>
+    <title>Java 7 - My Java Code Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "java_5";
-        var mkdocs_page_input_path = "java_5.md";
+        var mkdocs_page_name = "Java 7";
+        var mkdocs_page_input_path = "java_7.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,7 +44,7 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Java Code</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../java-code/">java_1</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_2/">java_2</a>
@@ -53,9 +53,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_4/">java_4</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_5</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_5/">java_5</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_6/">java_6</a>
                   </li>
@@ -74,8 +72,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Java Code</li>
-      <li class="breadcrumb-item active">java_5</li>
+      <li class="breadcrumb-item active">Java 7</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -84,26 +81,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>Este programa invierte una cadena de texto dada. Utiliza un ciclo for que recorre la cadena desde el último carácter hasta el primero, concatenando cada carácter en una nueva cadena para mostrar el resultado invertido. Por ejemplo, convierte "hello" en "olleh".</p>
-<h3 id="invertir-una-cadena-en-java">Invertir una cadena en Java.:</h3>
+                <h2 id="concatenador-de-iniciales-para-codigo-de-usuario">Concatenador de Iniciales para Código de Usuario</h2>
+<p>Este proyecto en Java solicita al usuario ingresar su nombre y dos apellidos desde teclado, y genera un código de usuario compuesto por las tres primeras letras de cada entrada (en mayúsculas).
+Ejemplo: si el usuario introduce "Lionel", "Tarazón" y "Alcocer", el resultado será LIOTARALC.</p>
+<p>El programa incluye validación de longitud para evitar errores con entradas menores de tres letras. Ideal para practicar el manejo de cadenas y entrada por teclado en Java.</p>
+<h3 id="concatenador-de-iniciales-para-codigo-de-usuario_1">Concatenador de Iniciales para Código de Usuario.:</h3>
 <p>```java</p>
-<p>public static void main(String[] args) {
-    String a = "hello";
-    String b = "";</p>
-<pre><code>for (int i = a.length() - 1; i &gt;= 0; i--) {
-    b += a.charAt(i);
-}
+<p>import java.util.Scanner;</p>
+<p>public class CodigoUsuario {</p>
+<pre><code>public static void main(String[] args) {
 
-System.out.println(b); // print: olleh
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("أدخل الاسم: ");
+    String nombre = scan.nextLine();
+
+    System.out.print("أدخل اسم العائلة الأول: ");
+    String apellido1 = scan.nextLine();
+
+    System.out.print("أدخل اسم العائلة الثاني: ");
+    String apellido2 = scan.nextLine();
+
+    String parteNombre;
+    if (nombre.length() &gt;= 3) {
+        parteNombre = nombre.substring(0, 3);
+    } else {
+        parteNombre = nombre;
+    }
+
+    String parteApellido1;
+    if (apellido1.length() &gt;= 3) {
+        parteApellido1 = apellido1.substring(0, 3);
+    } else {
+        parteApellido1 = apellido1;
+    }
+
+    String parteApellido2;
+    if (apellido2.length() &gt;= 3) {
+        parteApellido2 = apellido2.substring(0, 3);
+    } else {
+        parteApellido2 = apellido2;
+    }
+
+    String codigoUsuario = (parteNombre + parteApellido1 + parteApellido2).toUpperCase();
+
+    System.out.println("رمز المستخدم الخاص بك هو: " + codigoUsuario);
+
+    scan.close();
+}
 </code></pre>
 <p>}</p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../java_4/" class="btn btn-neutral float-left" title="java_4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../java_6/" class="btn btn-neutral float-right" title="java_6">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -125,10 +155,6 @@ System.out.println(b); // print: olleh
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../java_4/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../java_6/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
