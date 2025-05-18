@@ -11,6 +11,8 @@ nav:
       - java_4: java_4.md 
       - java_5: java_5.md 
       - java_6: java_6.md 
+      - java_7: java_7.md 
+
 
 # This is where MKDocs looks for the markdown files
 docs_dir: docs_src
