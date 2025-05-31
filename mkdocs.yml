@@ -16,7 +16,7 @@ nav:
           - Introducción general: CuentaBancaria/index.md
           - Clase CuentaBancaria: CuentaBancaria/CuentaBancaria.md
           - Clase CuentaCorriente: CuentaBancaria/CuentaCorriente.md
-          - Clase CuentaAhorro: CuentaBancaria/cuentaAhorro.md
+          - Clase CuentaAhorro: CuentaBancaria/CuentaAhorro.md
           - Clase Principal (Main): CuentaBancaria/Main.md
 
        
