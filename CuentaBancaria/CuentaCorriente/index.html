@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Main - My Java Code Documentation</title>
+    <title>CuentaCorriente - My Java Code Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Main";
-        var mkdocs_page_input_path = "CuentaBancaria.md/Main.md";
+        var mkdocs_page_name = "CuentaCorriente";
+        var mkdocs_page_input_path = "CuentaBancaria/CuentaCorriente.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -59,7 +59,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java_7/">java_7</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="..">CuentaBancaria</a>
+                  <li class="toctree-l1"><a class="" href="../../CuentaBancaria.md">CuentaBancaria</a>
                   </li>
                   <li class="toctree-l1"><a class="" href="../../Main.md">Main</a>
                   </li>
@@ -78,7 +78,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Main</li>
+      <li class="breadcrumb-item active">CuentaCorriente</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -89,38 +89,23 @@
               
                 <p>/<em>
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  </em>/
 package javaapplication2;</p>
-<p>import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Scanner;</p>
 <p>/*<em>
  *
  * @author abdelmoumen
  </em>/
-public class Main {</p>
-<pre><code>public static void main(String[] args) {
+  public class  CuentaCorriente extends CuentaBancaria {</p>
+<pre><code>public CuentaCorriente(String iban, int saldo) {
+    super(iban, saldo);
+}
+
+@Override
+public void calcularIntereses() {
 
 
-
-
-   CuentaCorriente corre = new CuentaCorriente ("wn123",1200);
-   CuentaAhorro ahorro = new CuentaAhorro ("ssn66",400);
-
-
-
-   corre.traspasar(ahorro, 500);
-
-
-    System.out.println(corre);
-    System.out.println(ahorro);
-
-
-
-
+    System.out.println(saldo*CuentaBancaria.getInteresAnualBasico());        
 }
 </code></pre>
 <p>}</p>

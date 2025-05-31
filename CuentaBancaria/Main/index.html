@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>CuentaBancaria - My Java Code Documentation</title>
+    <title>Main - My Java Code Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "CuentaBancaria";
-        var mkdocs_page_input_path = "CuentaBancaria.md/CuentaBancaria.md";
+        var mkdocs_page_name = "Main";
+        var mkdocs_page_input_path = "CuentaBancaria/Main.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -59,7 +59,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java_7/">java_7</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="..">CuentaBancaria</a>
+                  <li class="toctree-l1"><a class="" href="../../CuentaBancaria.md">CuentaBancaria</a>
                   </li>
                   <li class="toctree-l1"><a class="" href="../../Main.md">Main</a>
                   </li>
@@ -78,7 +78,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">CuentaBancaria</li>
+      <li class="breadcrumb-item active">Main</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -89,103 +89,38 @@
               
                 <p>/<em>
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  </em>/
 package javaapplication2;</p>
+<p>import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Scanner;</p>
 <p>/*<em>
  *
  * @author abdelmoumen
  </em>/
-public abstract class CuentaBancaria {</p>
-<pre><code>private String iban;
-  int saldo;
- private static final int interesAnualBasico =5;
-
-
-
-public CuentaBancaria (String iban,int saldo){
-
-
-   this.iban=iban;
-   this.saldo=saldo;
-
-}
-
-
-
-public String getIban() {
-    return iban;
-}
-
-public static int getInteresAnualBasico() {
-    return interesAnualBasico;
-}
-
-
-
-public int getSaldo() {
-    return saldo;
-}
-
-
-public void ingresar (int ingres){
-
-   anadir(ingres);
-
-
-}
-
-public void retirar (int tirar){
-
-
-
-    if (tirar &gt; saldo){
-
-        System.out.println("saldo insifison para tirar");
-    }else{
-
-         anadir(-tirar);
-
-    }
-
-}
-
-public void traspasar (CuentaBancaria destino,int amount){
-
-    if (amount &gt;saldo ){
-
-           System.out.println("saldo insifison para transpasar");
-
-    } else{
-
-
-      anadir(-amount);
-      destino.anadir(amount);
-
-    }
-
-
-}
-
-
-public void anadir (int anadir){
-
-
-
-    saldo+=anadir;
-
-}
-
-
-
-public abstract void calcularIntereses();
+public class Main {</p>
+<pre><code>public static void main(String[] args) {
 
 
 
 
-@Override
-public String toString() {
-    return "CuentaBancaria{" + "iban=" + iban + ", saldo=" + saldo + '}';
+   CuentaCorriente corre = new CuentaCorriente ("wn123",1200);
+   CuentaAhorro ahorro = new CuentaAhorro ("ssn66",400);
+
+
+
+   corre.traspasar(ahorro, 500);
+
+
+    System.out.println(corre);
+    System.out.println(ahorro);
+
+
+
+
 }
 </code></pre>
 <p>}</p>
