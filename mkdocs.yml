@@ -13,7 +13,11 @@ nav:
       - java_6: java_6.md 
       - java_7: java_7.md 
       - Cuenta Bancaria : 
-        - Página principal: cuentabancaria/index.md
+          - Introducción general: CuentaBancaria/index.md
+          - Clase CuentaBancaria: CuentaBancaria/CuentaBancaria.md
+          - Clase CuentaCorriente: CuentaBancaria/CuentaCorriente.md
+          - Clase CuentaAhorro: CuentaBancaria/cuentaAhorro.md
+          - Clase Principal (Main): CuentaBancaria/Main.md
 
        
 
