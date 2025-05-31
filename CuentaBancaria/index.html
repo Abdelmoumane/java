@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>java_1 - My Java Code Documentation</title>
+    <title>CuentaBancaria - My Java Code Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "java_1";
-        var mkdocs_page_input_path = "java-code.md";
+        var mkdocs_page_name = "CuentaBancaria";
+        var mkdocs_page_input_path = "CuentaBancaria/index.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,12 +44,8 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Java Code</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_1</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#count-vowels">Count Vowels:</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../java-code/">java_1</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_2/">java_2</a>
                   </li>
@@ -84,8 +80,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Java Code</li>
-      <li class="breadcrumb-item active">java_1</li>
+      <li class="breadcrumb-item active">CuentaBancaria</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -94,40 +89,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="java-program-to-count-vowels">Java Program to Count Vowels</h2>
-<p>Este programa en Java solicita al usuario que ingrese una cadena de texto y luego cuenta cuántas vocales (minúsculas 'a', 'e', 'i') contiene.</p>
-<h3 id="count-vowels">Count Vowels:</h3>
-<p>```java
-import java.util.Scanner;</p>
-<p>public class JavaFx {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);</p>
-<pre><code>    System.out.println("Introduce cadena:");
-
-    String numbre = scan.nextLine();
-
-    int contadorVocales = 0;
-
-    // Recorremos cada carácter de la cadena
-    for (char ch : numbre.toCharArray()) {
-        // Si el carácter es una vocal, aumentamos el contador
-        if ("aei".indexOf(ch) != -1) {
-            contadorVocales++;
-        }
-    }
-
-    // Imprimimos la cantidad de vocales encontradas
-    System.out.println("La palabra tiene " + contadorVocales + " vocales.");
-}
-</code></pre>
-<p>}</p>
+                <h1 id="cuentabancaria">CuentaBancaria</h1>
+<p><code>CuentaBancaria</code> es una <strong>clase abstracta</strong> que representa las operaciones básicas de una cuenta bancaria. Contiene atributos y métodos comunes para distintos tipos de cuentas.</p>
+<hr />
+<h2 id="atributos">🧾 Atributos</h2>
+<ul>
+<li><code>private String iban</code>: Número de cuenta bancaria internacional.</li>
+<li><code>protected int saldo</code>: Saldo actual de la cuenta.</li>
+<li><code>private static final int interesAnualBasico</code>: Interés anual básico aplicado a todas las cuentas.</li>
+</ul>
+<hr />
+<h2 id="metodos">🔧 Métodos</h2>
+<h3 id="public-string-getiban"><code>public String getIban()</code></h3>
+<p>Devuelve el número IBAN de la cuenta.</p>
+<h3 id="public-int-getsaldo"><code>public int getSaldo()</code></h3>
+<p>Devuelve el saldo actual de la cuenta.</p>
+<h3 id="public-static-int-getinteresanualbasico"><code>public static int getInteresAnualBasico()</code></h3>
+<p>Devuelve el valor del interés anual básico.</p>
+<h3 id="public-void-ingresarint-cantidad"><code>public void ingresar(int cantidad)</code></h3>
+<p>Suma la cantidad indicada al saldo de la cuenta.</p>
+<h3 id="public-void-retirarint-cantidad"><code>public void retirar(int cantidad)</code></h3>
+<p>Resta la cantidad del saldo si hay suficiente dinero.</p>
+<h3 id="public-void-traspasarcuentabancaria-destino-int-cantidad"><code>public void traspasar(CuentaBancaria destino, int cantidad)</code></h3>
+<p>Transfiere dinero desde esta cuenta a otra cuenta bancaria.</p>
+<h3 id="public-abstract-void-calcularintereses"><code>public abstract void calcularIntereses()</code></h3>
+<p>Método abstracto que debe implementarse en las clases hijas para calcular los intereses.</p>
+<hr />
+<h2 id="clases-hijas">🧬 Clases hijas</h2>
+<ul>
+<li><a href="../cuentacorriente/index.md"><code>CuentaCorriente</code></a></li>
+<li><a href="../cuentaahorro/index.md"><code>CuentaAhorro</code></a></li>
+</ul>
+<hr />
+<h2 id="notas">📌 Notas</h2>
+<ul>
+<li>No se puede crear una instancia directamente de <code>CuentaBancaria</code>.</li>
+<li>Cada subclase debe definir cómo se calculan los intereses, dependiendo de sus reglas específicas.</li>
+</ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../java_2/" class="btn btn-neutral float-right" title="java_2">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -149,10 +150,6 @@ import java.util.Scanner;</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../java_2/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
