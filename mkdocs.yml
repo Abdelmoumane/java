@@ -12,8 +12,9 @@ nav:
       - java_5: java_5.md 
       - java_6: java_6.md 
       - java_7: java_7.md 
-      - CuentaBancaria : CuentaBancaria.md
-      - Main: Main.md
+      - Cuenta Bancaria : 
+        - Página principal: cuentabancaria/index.md
+
        
 
 
