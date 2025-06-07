@@ -18,6 +18,7 @@ nav:
           - Clase CuentaCorriente: CuentaBancaria/CuentaCorriente.md
           - Clase CuentaAhorro: CuentaBancaria/CuentaAhorro.md
           - Clase Principal (Main): CuentaBancaria/Main.md
+      -  excepciones-java.md: excepciones-java.md  
 
        
 
