@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>excepciones-java.md - My Java Code Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "excepciones-java.md";
+        var mkdocs_page_input_path = "excepciones-java.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Java Code Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Java Code</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../java-code/">java_1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_2/">java_2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_3/">java_3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_4/">java_4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_5/">java_5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_6/">java_6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_7/">java_7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cuenta Bancaria</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../CuentaBancaria/">Introducción general</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CuentaBancaria/CuentaBancaria/">Clase CuentaBancaria</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CuentaBancaria/CuentaCorriente/">Clase CuentaCorriente</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CuentaBancaria/CuentaAhorro/">Clase CuentaAhorro</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CuentaBancaria/Main/">Clase Principal (Main)</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">excepciones-java.md</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objetivo">🎯 Objetivo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reglas-clave">🧠 Reglas Clave</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ejemplos-clave">🧪 Ejemplos clave</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ejemplo-1-return-en-try-sin-return-en-finally">✅ Ejemplo 1: return en try, sin return en finally</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2">2</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Java Code Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java Code</li>
+      <li class="breadcrumb-item active">excepciones-java.md</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="leccion-manejo-de-excepciones-en-java-try-catch-finally">Lección: Manejo de Excepciones en Java (<code>try</code>, <code>catch</code>, <code>finally</code>)</h1>
+<h2 id="objetivo">🎯 Objetivo</h2>
+<p>Comprender cómo funcionan los bloques <code>try</code>, <code>catch</code> y <code>finally</code> en Java, y cómo interactúan con <code>return</code> y excepciones.</p>
+<hr />
+<h2 id="reglas-clave">🧠 Reglas Clave</h2>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>return</code> en <code>try</code>, sin <code>return</code> en <code>finally</code></td>
+<td>Se ejecuta <code>finally</code>, luego se devuelve el valor del <code>try</code></td>
+</tr>
+<tr>
+<td><code>return</code> en <code>try</code> y en <code>finally</code></td>
+<td>Gana el <code>return</code> del <code>finally</code> (anula el del <code>try</code>)</td>
+</tr>
+<tr>
+<td>Excepción en <code>try</code>, <code>return</code> en <code>finally</code></td>
+<td>El <code>return</code> en <code>finally</code> oculta la excepción</td>
+</tr>
+<tr>
+<td><code>return</code> en <code>try</code>, <code>throw</code> en <code>finally</code></td>
+<td>Se lanza la excepción de <code>finally</code>, anulando el <code>return</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejemplos-clave">🧪 Ejemplos clave</h2>
+<h3 id="ejemplo-1-return-en-try-sin-return-en-finally">✅ Ejemplo 1: <code>return</code> en <code>try</code>, sin <code>return</code> en <code>finally</code></h3>
+<p>```java
+public static int ejemplo1() {
+    try {
+        return 1;
+    } finally {
+        System.out.println("En finally");
+    }
+}
+Salida:</p>
+<p>En finally
+1</p>
+<hr />
+<p>❗ Ejemplo 2: return en try y en finally</p>
+<p>public static int ejemplo2() {
+    try {
+        return 1;
+    } finally {
+        return 2;
+    }
+}
+Salida:</p>
+<h2 id="2">2</h2>
+<p>🚫 Ejemplo 3: return en try, throw en finally
+java
+Copy
+Edit
+public static int ejemplo3() {
+    try {
+        return 1;
+    } finally {
+        throw new RuntimeException("Error en finally");
+    }
+}
+Salida:</p>
+<p>Exception: Error en finally</p>
+<hr />
+<p>🔁 Ejemplo 4: Excepción en try, return en finally</p>
+<p>public static int ejemplo4() {
+    try {
+        int x = 10 / 0;
+        return 5;
+    } finally {
+        return 100;
+    }
+}
+Salida:</p>
+<p>100</p>
+<hr />
+<p>🧨 Tres Excepciones Comunes</p>
+<ol>
+<li>ArrayIndexOutOfBoundsException</li>
+</ol>
+<p>int[] arr = new int[2];
+System.out.println(arr[5]); // índice fuera de rango
+2. NumberFormatException</p>
+<hr />
+<p>int num = Integer.parseInt("abc"); // texto no convertible
+3. NullPointerException</p>
+<hr />
+<p>String s = null;
+System.out.println(s.length()); // acceso a null
+🔷 Ejemplo Completo: Propagación de Excepciones</p>
+<hr />
+<p>public class PropagaExcepcion {
+    private static void metodo2() throws ArrayIndexOutOfBoundsException {
+        try {
+            System.out.println("2.1");
+            int[] arr = new int[2];
+            System.out.println(arr[5]); // Lanza excepción
+            System.out.println("2.2");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("2.3");
+            throw e; // se propaga
+        } catch (Exception e) {
+            System.out.println("2.4");
+        } finally {
+            System.out.println("2.5");
+        }
+    }</p>
+<pre><code>public static void metodo1() {
+    try {
+        System.out.println("1.1");
+        metodo2();
+        System.out.println("1.2");
+    } catch (Exception e) {
+        System.out.println("1.3");
+    } finally {
+        System.out.println("1.4");
+    }
+}
+</code></pre>
+<p>}</p>
+<h1 id="preguntas-sobre-propagacion-de-excepciones">Preguntas sobre Propagación de Excepciones</h1>
+<h2 id="pregunta-a">🧩 Pregunta a)</h2>
+<h3 id="que-ocurre-al-ejecutar-propagaexcepcionmetodo1">❓ ¿Qué ocurre al ejecutar <code>PropagaExcepcion.metodo1();</code></h3>
+<p>(lanzando <code>ArrayIndexOutOfBoundsException</code> en <code>metodo2()</code>)</p>
+<h3 id="ejecucion-paso-a-paso">✅ Ejecución paso a paso</h3>
+<ol>
+<li><code>metodo1()</code> comienza:<ul>
+<li>Imprime: <code>1.1</code></li>
+</ul>
+</li>
+<li>Llama a <code>metodo2()</code>:<ul>
+<li>Imprime: <code>2.1</code></li>
+<li>Se lanza <code>ArrayIndexOutOfBoundsException</code> en <code>arr[5]</code></li>
+<li>Va al primer <code>catch</code>: imprime <code>2.3</code></li>
+<li>Lanza la excepción nuevamente: <code>throw e</code></li>
+<li>Ejecuta <code>finally</code>: imprime <code>2.5</code></li>
+</ul>
+</li>
+<li>Regresa a <code>metodo1()</code>:<ul>
+<li>Captura la excepción en <code>catch (Exception e)</code>: imprime <code>1.3</code></li>
+<li>Ejecuta <code>finally</code>: imprime <code>1.4</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="salida-esperada">🖨️ Salida esperada</h3>
+<p>1.1
+2.1
+2.3
+2.5
+1.3
+1.4</p>
+<hr />
+<h2 id="pregunta-a2">🧩 Pregunta a.2)</h2>
+<h3 id="que-pasa-si-en-lugar-de-arrayindexoutofboundsexception-se-lanza-numberformatexception">❓ ¿Qué pasa si en lugar de <code>ArrayIndexOutOfBoundsException</code> se lanza <code>NumberFormatException</code>?</h3>
+<blockquote>
+<p>Reemplazamos la instrucción por:
+```java
+int x = Integer.parseInt("abc"); // Lanza NumberFormatException
+✅ Ejecución paso a paso
+metodo1() comienza:</p>
+</blockquote>
+<p>Imprime: 1.1</p>
+<p>Llama a metodo2():</p>
+<p>Imprime: 2.1</p>
+<p>Se lanza NumberFormatException</p>
+<p>Va al segundo catch (Exception e): imprime 2.4</p>
+<p>Ejecuta finally: imprime 2.5</p>
+<p>Regresa a metodo1():</p>
+<p>Captura la excepción: imprime 1.3</p>
+<p>Ejecuta finally: imprime 1.4</p>
+<p>🖨️ Salida esperada</p>
+<p>1.1<br />
+2.1<br />
+2.4<br />
+2.5<br />
+1.3<br />
+1.4</p>
+<h2 id="pregunta-b">🧩 Pregunta b)</h2>
+<p>❓ ¿Qué pasa si no se lanza ninguna excepción?
+Quitamos la instrucción que lanza la excepción en metodo2().</p>
+<p>✅ Ejecución paso a paso
+metodo1() comienza:</p>
+<p>Imprime: 1.1</p>
+<p>Llama a metodo2():</p>
+<p>Imprime: 2.1</p>
+<p>Imprime: 2.2 (no hay excepción)</p>
+<p>No entra en ningún catch</p>
+<p>Ejecuta finally: imprime 2.5</p>
+<p>Regresa a metodo1():</p>
+<p>Imprime: 1.2</p>
+<p>Ejecuta finally: imprime 1.4</p>
+<p>🖨️ Salida esperada</p>
+<p>1.1<br />
+2.1<br />
+2.2<br />
+2.5<br />
+1.2<br />
+1.4</p>
+<hr />
+<p>🧩 Ejercicio Final
+Enunciado</p>
+<p>public class ExcepcionEjemplo {
+    public static int test() {
+        try {
+            int x = Integer.parseInt("abc");
+            return 1;
+        } catch (NumberFormatException e) {
+            System.out.println("¡Formato inválido!");
+            return 2;
+        } finally {
+            System.out.println("Bloque finally ejecutado");
+        }
+    }</p>
+<pre><code>public static void main(String[] args) {
+    System.out.println("Resultado: " + test());
+}
+</code></pre>
+<p>}</p>
+<p>✅ Salida esperada</p>
+<p>¡Formato inválido!
+Bloque finally ejecutado
+Resultado: 2</p>
+<hr />
+<p>📝 Conclusiones
+El bloque finally siempre se ejecuta.</p>
+<p>Si finally tiene return o throw, anula lo anterior.</p>
+<p>Usar return en finally puede ocultar errores.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../CuentaBancaria/Main/" class="btn btn-neutral float-left" title="Clase Principal (Main)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../CuentaBancaria/Main/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
