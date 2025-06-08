@@ -19,6 +19,7 @@ nav:
           - Clase CuentaAhorro: CuentaBancaria/CuentaAhorro.md
           - Clase Principal (Main): CuentaBancaria/Main.md
       -  Excepciones-java.md: Excepciones-java.md  
+      - file-analysis: file-analysis.md
 
        
 
