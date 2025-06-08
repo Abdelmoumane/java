@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>java_5 - My Java Code Documentation</title>
+    <title>file-analysis - My Java Code Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "java_5";
-        var mkdocs_page_input_path = "java_5.md";
+        var mkdocs_page_name = "file-analysis";
+        var mkdocs_page_input_path = "file-analysis.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -53,9 +53,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_4/">java_4</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">java_5</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../java_5/">java_5</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../java_6/">java_6</a>
                   </li>
@@ -77,7 +75,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Excepciones-java/">Excepciones-java.md</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../file-analysis/">file-analysis</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">file-analysis</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#java_1">🧠 كود Java المستخدم:</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -95,7 +97,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java Code</li>
-      <li class="breadcrumb-item active">java_5</li>
+      <li class="breadcrumb-item active">file-analysis</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -104,25 +106,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>Este programa invierte una cadena de texto dada. Utiliza un ciclo for que recorre la cadena desde el último carácter hasta el primero, concatenando cada carácter en una nueva cadena para mostrar el resultado invertido. Por ejemplo, convierte "hello" en "olleh".</p>
-<h3 id="invertir-una-cadena-en-java">Invertir una cadena en Java.:</h3>
-<p>```java</p>
-<p>public static void main(String[] args) {
-    String a = "hello";
-    String b = "";</p>
-<pre><code>for (int i = a.length() - 1; i &gt;= 0; i--) {
-    b += a.charAt(i);
-}
+                <h1 id="java">🧾 تحليل ملف نصّي باستخدام Java</h1>
+<p>هذا البرنامج يقوم بـ:</p>
+<ul>
+<li>عدّ عدد <strong>الأسطر</strong> في الملف.</li>
+<li>عدّ عدد <strong>الكلمات</strong>.</li>
+<li>عدّ عدد <strong>الحروف (بدون الفراغات)</strong>.</li>
+</ul>
+<hr />
+<h2 id="java_1">🧠 كود Java المستخدم:</h2>
+<p>```java
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;</p>
+<p>public class Main {
+    public static void main(String[] args) {
+        int lineCount = 0;
+        int wordCount = 0;
+        int charCount = 0;</p>
+<pre><code>    try {
+        // 📌 ضع هنا مسار الملف الخاص بك
+        File file = new File("/Users/TXT/fileMix.txt");
+        Scanner scanner = new Scanner(file);
 
-System.out.println(b); // print: olleh
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            lineCount++;
+
+            // حذف الفراغات الزائدة
+            String trimmedLine = line.trim();
+
+            // ✅ عد الكلمات
+            if (!trimmedLine.isEmpty()) {
+                String[] words = trimmedLine.split("\\s+");
+                wordCount += words.length;
+            }
+
+            // ✅ عد الحروف (بدون المسافات)
+            charCount += trimmedLine.replaceAll("\\s+", "").length();
+        }
+
+        scanner.close();
+
+        System.out.println("📊 تحليل الملف:");
+        System.out.println("عدد السطور: " + lineCount);
+        System.out.println("عدد الكلمات: " + wordCount);
+        System.out.println("عدد الحروف (بدون فراغات): " + charCount);
+
+    } catch (IOException e) {
+        System.out.println("❌ حدث خطأ: " + e.getMessage());
+    }
+}
 </code></pre>
 <p>}</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../java_4/" class="btn btn-neutral float-left" title="java_4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../java_6/" class="btn btn-neutral float-right" title="java_6">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Excepciones-java/" class="btn btn-neutral float-left" title="Excepciones-java.md"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -145,10 +186,8 @@ System.out.println(b); // print: olleh
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../java_4/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Excepciones-java/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../java_6/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
